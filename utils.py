@@ -46,7 +46,7 @@ def plot_graph_matrix(X, Y, W, fignum='graph matrix'):
 def plot_edges_and_points(X, Y, W,title=''):
     colors=['go-', 'ro-', 'co-', 'ko-', 'yo-', 'mo-']
     n=len(X)
-    G=nx.from_numpy_matrix(W)
+    G=nx.from_numpy_array(W)
     nx.draw_networkx_edges(G, X)
     for i in range(n):
         plt.plot(X[i, 0], X[i, 1], colors[int(Y[i])])
